@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRE Accommodation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo"><i class="fas fa-hotel"></i> SRE</a>
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#room">Room</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#review">FAQ</a>
+            <a href="#reservation" class="btn">Book Now</a>
+        </nav>
+        <div id="menu-btn" class="fas fa-bars"></div>
+    </header>
+    
+    <section class="home" id="home">
+        <div class="swiper-container home-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide slide" style="background: url(images/room1.jpg) no-repeat;">
+                    <div class="content">
+                        <h3>It's where dreams come true</h3>
+                        <a href="#" class="btn">Visit our offer</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide" style="background: url(images/room2.jpg) no-repeat;">
+                    <div class="content">
+                        <h3>It's where dreams come true</h3>
+                        <a href="#" class="btn">Visit our offer</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide" style="background: url(images/room3.jpg) no-repeat;">
+                    <div class="content">
+                        <h3>It's where dreams come true</h3>
+                        <a href="#" class="btn">Visit our offer</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide" style="background: url(images/room4.jpg) no-repeat;">
+                    <div class="content">
+                        <h3>It's where dreams come true</h3>
+                        <a href="#" class="btn">Visit our offer</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+
+        </div>
+    </section>
+
+    <!-- Separate the form into its own section -->
+    <section class="availability">
+        <form action="">
+            <div class="box">
+                <p>Check In<span>*</span></p>
+                <input type="date" class="input">
+            </div>
+
+            <div class="box">
+                <p>Check Out<span>*</span></p>
+                <input type="date" class="input">
+            </div>
+
+            <div class="box">
+                <p>Adults<span>*</span></p>
+                <select name="adults" id="" class="input">
+                    <option value="1">1 adult</option>
+                    <option value="2">2 adults</option>
+                    <option value="3">3 adults</option>
+                    <option value="4">4 adults</option>
+                    <option value="5">5 adults</option>
+                </select>
+            </div>
+
+            <div class="box">
+                <p>Children<span>*</span></p>
+                <select name="children" id="" class="input">
+                    <option value="1">1 child</option>
+                    <option value="2">2 children</option>
+                    <option value="3">3 children</option>
+                    <option value="4">4 children</option>
+                    <option value="5">5 children</option>
+                </select>
+            </div>
+
+            <div class="box">
+                <p>Rooms<span>*</span></p>
+                <select name="rooms" id="" class="input">
+                    <option value="1">1 room</option>
+                    <option value="2">2 rooms</option>
+                    <option value="3">3 rooms</option>
+                    <option value="4">4 rooms</option>
+                    <option value="5">5 rooms</option>
+                </select>
+            </div>
+
+            <input type="submit" value="Check Availability" class="btn">
+        </form>
+    </section>
+
+
+
+<section class="about" id="about">
+    <div class="row">
+        <div class="image">
+            <img src="images/room1.jpg" alt="">
+        </div>
+        <div class="content">
+            <h3>About Us</h3>
+            <p>At Spirit Revelation Church, we offer a tranquil retreat for those seeking spiritual renewal. Our accommodations are designed to provide comfort and peace, enhancing your experience whether you're here for a service, a retreat, or a peaceful escape. Join us to rejuvenate both body and spirit in a welcoming and serene environment. We look forward to making your stay memorable.
+
+            </p>
+        </div>
+    </div>
+</section>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
