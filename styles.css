@@ -1,48 +1,63 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
 
-:root{
-    --primary:#0077b6;
+:root {
+    --primary: #0077b6;
     --secondary: #48cae4;
-    --black:#333;
-    --white:#fff;
-    --box-shadow: 0 .5rem 1rem rgba(0,0,0.1);
+    --black: #333;
+    --white: #fff;
+    --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
 }
 
-*{
-    font-family: 'Poppins', sans-serif;    
-    margin:0;
-    padding:0;
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
     outline: none;
     border: none;
     text-decoration: none;
     text-transform: capitalize;
-    transition: .2S linear;
+    transition: .2s linear;
+    box-sizing: border-box; /* Ensure padding and border are included in element's width and height */
 }
 
 html {
     font-size: 62.5%;
     scroll-padding-top: 9rem;
     scroll-behavior: smooth;
-}
-body {
-    overflow: auto; /* If needed, but usually removing overflow from html is sufficient */
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
-html::-webkit-scrollbar{
+body {
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+html::-webkit-scrollbar {
     width: .8rem;
 }
-html::-webkit-scrollbar-track{
+
+html::-webkit-scrollbar-track {
     background: transparent;
 }
-html::-webkit-scrollbar-thumb{
+
+html::-webkit-scrollbar-thumb {
     background: var(--primary);
     border-radius: .5rem;
 }
 
-section{
+section {
     padding: 5rem 7%;
 }
-.btn{
+
+.heading {
+    font-size: 4rem;
+    color: var(--primary);
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bolder;
+    margin-bottom: 3rem;
+}
+
+.btn {
     display: inline-block;
     margin-top: 1rem;
     padding: 1rem 3rem;
@@ -50,17 +65,18 @@ section{
     border-radius: .5rem;
     color: var(--white);
     font-size: 1.7rem;
-    cursor:pointer;
+    cursor: pointer;
 }
 
-.btn:hover{
+.btn:hover {
     background: var(--primary);
 }
 
-  
-.header{
+.header {
     position: fixed;
-    top:0; left:0; right: 0;
+    top: 0;
+    left: 0;
+    right: 0;
     z-index: 1000;
     background-color: var(--white);
     box-shadow: var(--box-shadow);
@@ -70,58 +86,59 @@ section{
     padding: 2rem 9%;
 }
 
-.header .logo{
+.header .logo {
     font-size: 2.5rem;
     font-weight: bolder;
     color: var(--black);
 }
 
-.header .logo i{
+.header .logo i {
     color: var(--primary);
     padding-right: .5rem;
 }
 
-.header .navbar a{
-    font-family: 1.7rem;
+.header .navbar a {
+    font-size: 1.7rem;
     color: var(--black);
     margin: 0 1rem;
 }
 
-
-.header .navbar a:hover{
-    color:var(--primary)
+.header .navbar a:hover {
+    color: var(--primary);
 }
-.header .navbar .btn{
+
+.header .navbar .btn {
     margin-top: 0;
     color: var(--white);
 }
-.header .navbar .btn:hover{
 
+.header .navbar .btn:hover {
     color: var(--white);
 }
 
-
-#menu-btn{
+#menu-btn {
     display: none;
 }
 
-.home{
+.home {
     padding: 0;
 }
-.home .slide{
+
+.home .slide {
     min-height: 100vh;
     background-size: cover !important;
     background-position: center !important;
     display: flex;
     align-items: center;
-    justify-content:center ;
-    z-index: -1;
+    justify-content: center;
 }
-.home.slide .content{
+
+.home.slide .content {
     width: 80rem;
     text-align: center;
 }
-.home .slide .content h3{
+
+.home .slide .content h3 {
     font-size: 4rem;
     text-transform: uppercase;
     color: var(--white);
@@ -130,22 +147,22 @@ section{
 }
 
 .swiper-button-next,
-.swiper-button-prev{
+.swiper-button-prev {
     height: 5rem;
-    width:5rem;
+    width: 5rem;
     line-height: 5rem;
-    background:var(--white) ;
+    background: var(--white);
     color: var(--black);
 }
 
 .swiper-button-next:hover,
-.swiper-button-prev:hover{
+.swiper-button-prev:hover {
     background: var(--primary);
     color: var(--white);
 }
 
 .swiper-button-next::after,
-.swiper-button-prev::after{
+.swiper-button-prev::after {
     font-size: 2rem;
 }
 
@@ -156,18 +173,15 @@ section{
     background: #eee;
     padding: 2rem;
     border-radius: 0.5rem;
-    box-sizing: border-box; /* Ensures padding/border do not affect width */
 }
 
 .availability form .box {
     flex: 1 1 20rem;
-    box-sizing: border-box; /* Ensures padding/border do not affect width */
 }
 
 .availability form .box p {
     font-size: 2rem;
     color: var(--primary);
-    margin: 0; /* Reset margin to ensure consistent spacing */
 }
 
 .availability form .box input,
@@ -176,60 +190,137 @@ section{
     padding: 1rem;
     font-size: 1.8rem;
     color: var(--black);
-    margin: 0.5rem 0; /* Adjusted margin for spacing */
+    margin: 0.5rem 0;
     border-radius: 0.5rem;
-    border: 1px solid #ccc; /* Added border for better visibility */
-    box-sizing: border-box; /* Ensures padding/border do not affect width */
+    border: 1px solid #ccc;
 }
 
 .availability form .box select {
-    appearance: none; /* Removes default styling for select element */
+    appearance: none;
 }
 
 .availability form .box input[type="date"] {
-    cursor: pointer; /* Adds a pointer cursor for date inputs */
+    cursor: pointer;
 }
 
 .availability form .btn {
-    background-color: var(--primary); /* Consistent background color */
-    color: #fff; /* Text color */
-    padding: 1rem 2rem; /* Padding for button */
+    background-color: var(--primary);
+    color: #fff;
+    padding: 1rem 2rem;
     font-size: 1.8rem;
-    border: none; /* Removes default border */
-    border-radius: 0.5rem; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor for button */
-    margin-top: 1rem; /* Space above button */
-    transition: background-color 0.3s ease; /* Smooth background color transition */
+    border-radius: 0.5rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
 }
 
 .availability form .btn:hover {
-    background-color: darken(var(--primary), 10%); /* Darkens color on hover */
-}
-.about .row{
-    display:flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap:6rem;
+    background-color: darken(var(--primary), 10%);
 }
 
-.about .row .image{
+.about .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6rem;
+}
+
+.about .row .image {
     flex: 1 1 30rem;
 }
-.about .row .image img{
+
+.about .row .image img {
     width: 100%;
 }
-.about .row .content{
+
+.about .row .content {
     flex: 1 1 51rem;
 }
-.about .row .content h3{
+
+.about .row .content h3 {
     font-size: 3.5rem;
     color: var(--primary);
     padding: 2rem 0;
 }
 
-.about .row .content p{
+.about .row .content p {
     font-size: 1.6rem;
-    color:#666;
-    padding:1rem 0;
+    color: #666;
+    padding: 1rem 0;
     line-height: 1.8;
+}
+
+.room .slide {
+    background: var(--white);
+    border: .1rem solid rgba(0, 0, 0, 0.2);
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    margin-bottom: 4rem;
+}
+
+.room .slide .image {
+    height: 25rem;
+    width: 100%;
+    padding: 1.5rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.room .slide .image img {
+    width: 100%;
+    height: 100%;
+    border-radius: .5rem;
+    object-fit: cover;
+}
+
+.room .slide .image .price {
+    position: absolute;
+    top: 2.5rem;
+    left: 2.5rem;
+    background: var(--primary);
+    color: var(--white);
+    font-size: 1.7rem;
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+}
+
+.room .slide .image .fa-shopping-cart {
+    position: absolute;
+    top: 2.5rem;
+    right: 2.5rem;
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    text-align: center;
+    font-size: 2rem;
+    background: var(--white);
+    color: var(--black);
+    border-radius: 50%;
+}
+
+.room .slide .image .fa-shopping-cart:hover {
+    background: var(--secondary);
+    color: var(--white);
+}
+
+.room .slide .content {
+    padding: 2rem;
+    padding-top: 0;
+}
+
+.room .slide .content h3 {
+    font-size: 2.5rem;
+    color: var(--black);
+}
+
+.room .slide .content p {
+    font-size: 1.6rem;
+    color: #666;
+    padding: .5rem 0;
+    line-height: 1.5;
+}
+
+.room .slide .content .stars i {
+    font-size: 1.7rem;
+    color: var(--primary);
 }
