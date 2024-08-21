@@ -6,43 +6,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SRE Accommodation</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
     <link rel="stylesheet" href="styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/1165876da6.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header class="header">
-        <a href="#" class="logo"><i class="fas fa-hotel"></i> SRE</a>
-        <nav class="navbar">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#room">Room</a>
-            <a href="#gallery">Gallery</a>
-            <a href="#review">FAQ</a>
-            <a href="#reservation" class="btn">Book Now</a>
-        </nav>
-        <div id="menu-btn" class="fas fa-bars"></div>
+    <header>
+        <div class="header-content">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="/Images/WhatsApp Image 2024-08-21 at 17.50.42.jpeg" alt="">
+                </a>
+            </div>
+            
+            <div class="nav-menu">
+                <a href="#home">Home</a>
+                <a href="#about">About Us</a>
+                <a href="#Rooms">Services</a>
+                <a href="#contact">Contact Us</a>
+                <a href="#reservation" class="book-button" style="color: black;">Book</a>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div> 
+    </div>
     </header>
     
     <section class="home" id="home">
         <div class="swiper-container home-slider">
             <div class="swiper-wrapper">
-                <div class="swiper-slide slide" style="background: url(images/room1.jpg) no-repeat;">
+                <div class="swiper-slide slide" style="background: url(images/foto1.jpg) no-repeat;">
                     <div class="content">
-                        <h3>It's where dreams come true</h3>
-                        <a href="#" class="btn">Visit our offer</a>
+                        <h3>Welcome to a place of rest and renewal</h3>
+                        <a href="#room" class="btn">Visit our offer</a>
                     </div>
                 </div>
 
                 <div class="swiper-slide slide" style="background: url(images/room2.jpg) no-repeat;">
                     <div class="content">
-                        <h3>It's where dreams come true</h3>
+                        <h3>Welcome to a place of rest and renewal</h3>
                         <a href="#" class="btn">Visit our offer</a>
                     </div>
                 </div>
 
                 <div class="swiper-slide slide" style="background: url(images/room3.jpg) no-repeat;">
                     <div class="content">
-                        <h3>It's where dreams come true</h3>
+                        <h3>Welcome to a place of rest and renewal</h3>
                         <a href="#" class="btn">Visit our offer</a>
                     </div>
                 </div>
@@ -62,7 +76,7 @@
     </section>
 
     <!-- Separate the form into its own section -->
-    <section class="availability">
+    <!-- <section class="availability">
         <form action="">
             <div class="box">
                 <p>Check In<span>*</span></p>
@@ -109,14 +123,14 @@
 
             <input type="submit" value="Check Availability" class="btn">
         </form>
-    </section>
+    </section> -->
 
 
 
 <section class="about" id="about">
     <div class="row">
         <div class="image">
-            <img src="images/room1.jpg" alt="">
+            <img src="images/anime.jpg" alt="">
         </div>
         <div class="content">
             <h3>About Us</h3>
@@ -135,27 +149,219 @@
             <!-- Room Slide 1 -->
             <div class="slide swiper-slide">
                 <div class="image">
-                    <span class="price">R1000</span>
-                    <img src="images/room2.jpg" alt="">
-                    <a href="#" class="fas fa-shopping-cart"></a>
+                    <span class="price">R2800-R3200</span>
+                    <img src="images/hotel2.jpg" alt="Standard Double Room">
+                    <a href="#reservation" class="fas fa-shopping-cart"></a>
                 </div>
                 <div class="content">
-                    <h3>Exclusive room</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, nesciunt quos praesentium hic tempore placeat quas architecto repellat vitae mollitia alias, temporibus totam eligendi et esse ad libero. Tenetur, itaque.</p>
+                    <h3>Standard Double Room</h3>
+                    <p>Experience comfort with a private bathroom and enjoy views of Table Mountain, all within a modern design.</p>
                     <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <a href="#" class="btn">Book Now</a>
+                    <a href="#reservation" class="btn">Book Now</a>
                 </div>
             </div>
-            <!-- Add more slides as needed -->
+            <!-- Room Slide 2 -->
+            <div class="slide swiper-slide">
+                <div class="image">
+                    <span class="price">R2500-R3000</span>
+                    <img src="images/hotel2.jpg" alt="Standard Room">
+                    <a href="#reservation" class="fas fa-shopping-cart"></a>
+                </div>
+                <div class="content">
+                    <h3>Standard Room</h3>
+                    <p>Perfect for solo travelers, offering modern amenities and a peaceful atmosphere.</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <a href="#reservation" class="btn">Book Now</a>
+                </div>
+            </div>
+            <!-- Room Slide 3 -->
+            <div class="slide swiper-slide">
+                <div class="image">
+                    <span class="price">R1500</span>
+                    <img src="images/hotel2.jpg" alt="Deluxe Family">
+                    <a href="#reservation" class="fas fa-shopping-cart"></a>
+                </div>
+                <div class="content">
+                    <h3>Deluxe Family</h3>
+                    <p>Ideal for families or groups, with two bedrooms and modern amenities for a comfortable stay.</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <a href="#reservation" class="btn">Book Now</a>
+                </div>
+            </div>
+            <!-- Room Slide 4 -->
+            <div class="slide swiper-slide">
+                <div class="image">
+                    <span class="price">R3800-R4600</span>
+                    <img src="images/hotel2.jpg" alt="Standard Suite">
+                    <a href="#reservation" class="fas fa-shopping-cart"></a>
+                </div>
+                <div class="content">
+                    <h3>Standard Suite</h3>
+                    <p>A spacious suite for families, complete with top-quality amenities and breakfast.</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <a href="#reservation" class="btn">Book Now</a>
+                </div>
+            </div>
         </div>
         <div class="swiper-pagination"></div>
     </div>
 </section>
+
+
+
+<section>
+    <div class="services">
+        <div class="box-container">
+            <div class="box">
+                <img src="images/hotel wifi.jpg" alt="">
+                <h3>Free Wifi</h3>
+            </div>
+
+            <div class="box">
+                <img src="images/breakfast icon.jpg" alt="">
+                <h3>Breakfast</h3>
+            </div>
+
+            <div class="box">
+                <img src="images/security icon.jpg" alt="">
+                <h3>Security</h3>
+            </div>
+
+            <div class="box">
+                <img src="images/cleaning.jpg" alt="">
+                <h3>Cleaning service</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="reservation" id="reservation">
+
+    <h1 class="heading">Book Now</h1>
+
+    <form action="">
+        <div class="container">
+            <div class="box">
+                <p> Full Name<span>*</span></p>
+                <input type="text" class="input" placeholder="Your Name">
+            </div>
+
+            <div class="box">
+                <p> Email<span>*</span></p>
+                <input type="text" class="input" placeholder="Your Name">
+            </div>
+
+            <div class="box">
+                <p> Check in<span>*</span></p>
+                <input type="date" class="input" placeholder="Your Name">
+            </div>
+
+            <div class="box">
+                <p> Check Out<span>*</span></p>
+                <input type="date" class="input" placeholder="Your Name">
+            </div>
+
+            <div class="box">
+                <p> Adults<span>*</span></p>
+                <select name="adults" class="input">
+                    <option value="1">1 Adult</option>
+                    <option value="2">2 Adults</option>
+                    <option value="3">3 Adults</option>
+                    <option value="4">4 Adults</option>
+                    <option value="5">5 Adults</option>
+                </select>
+            </div>
+
+            <div class="box">
+                <p> Children<span>*</span></p>
+                <select name="children" class="input">
+                    <option value="1">1 child</option>
+                    <option value="2">2 children</option>
+                    <option value="3">3 children</option>
+                    <option value="4">4 children</option>
+                    <option value="5">5 children</option>
+                </select>
+            </div>
+
+            <div class="box">
+                <p> Room type<span>*</span></p>
+                <select name="type" class="input">
+                    <option value="1">Standard Double Room</option>
+                    <option value="2">Delute Family Suite</option>
+                    <option value="3">Standard Room</option>
+                    <option value="4">Standard Suite</option>
+                </select>
+            </div>
+
+            <input type="submit" value="check availability" class="btn">
+        </div>
+    </form>
+</section>
+
+<section class="contact" id="contact">
+    <h1 class="heading">Contact Us</h1>
+
+    <form action="">
+        <div class="container">
+            <div class="box">
+                <p> Full Name<span>*</span></p>
+                <input type="text" class="input" placeholder="Your Name">
+            </div>
+
+            <div class="box">
+                <p> Email<span>*</span></p>
+                <input type="email" class="input" placeholder="Your Email">
+            </div>
+
+            <div class="box">
+                <p> Phone Number<span>*</span></p>
+                <input type="tel" class="input" placeholder="Your Phone Number">
+            </div>
+
+            <div class="box">
+                <p> Subject<span>*</span></p>
+                <input type="text" class="input" placeholder="Subject">
+            </div>
+
+            <div class="box">
+                <p> Message<span>*</span></p>
+                <textarea class="input" placeholder="Your Message" rows="5"></textarea>
+            </div>
+
+            <input type="submit" value="Send Message" class="btn">
+        </div>
+    </form>
+</section>
+
+
+<footer class="footer-container">
+    <div class="footer-content">
+        <!-- <h3>Contact Us</h3> -->
+      <p><i class='bx bxs-map'></i> 284 Vootrekker Road Maitland, Cape Town, South Africa <br>
+      <i class='bx bxs-phone'></i> 021 510 4029 <br>
+      <img src=""><i class='bx bxs-envelope'></i> info@saintjohnholdings.com</p>
+      <ul class="socials">
+        <li><a href=""><i class='bx bxl-youtube'></i></a></li>
+        <li><a href=""><i class='bx bxl-twitter'></i></a></li>
+        <li><a href=""><i class='bx bxl-instagram-alt'></i></a></li>
+        <li><a href=""><i class='bx bxl-facebook'></i></a></li>
+    </ul>
+        <p>&copy; 2024 Spirit Revelation Ecclesia. All rights reserved.</p>
+    </div>
+</footer>
+
 
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="script.js"></script>

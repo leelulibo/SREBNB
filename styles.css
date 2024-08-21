@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
 
 :root {
-    --primary: #0077b6;
+    --primary: #181661;
     --secondary: #48cae4;
     --black: #333;
     --white: #fff;
@@ -78,7 +78,7 @@ section {
     left: 0;
     right: 0;
     z-index: 1000;
-    background-color: var(--white);
+    background-color: #181661;
     box-shadow: var(--box-shadow);
     display: flex;
     align-items: center;
@@ -86,7 +86,7 @@ section {
     padding: 2rem 9%;
 }
 
-.header .logo {
+/* .header .logo {
     font-size: 2.5rem;
     font-weight: bolder;
     color: var(--black);
@@ -99,7 +99,7 @@ section {
 
 .header .navbar a {
     font-size: 1.7rem;
-    color: var(--black);
+    color: var(--white);
     margin: 0 1rem;
 }
 
@@ -114,7 +114,23 @@ section {
 
 .header .navbar .btn:hover {
     color: var(--white);
-}
+} */
+
+@media (max-width: 768px) {
+    .header-content {
+      flex-direction: column;
+    }
+  
+    nav ul {
+      margin-top: 1rem;
+    }
+  
+    nav ul li {
+      margin-left: 0;
+      margin-right: 1rem;
+    }
+  }
+  
 
 #menu-btn {
     display: none;
@@ -127,13 +143,14 @@ section {
 .home .slide {
     min-height: 100vh;
     background-size: cover !important;
-    background-position: center !important;
+    background-position: center center !important;
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.home.slide .content {
+.home .slide .content {
     width: 80rem;
     text-align: center;
 }
@@ -144,6 +161,8 @@ section {
     color: var(--white);
     line-height: 1.1;
     padding: 2rem;
+    background: rgba(0, 0, 0, 0.5); /* Optional: Add a slight background to enhance text readability */
+    border-radius: 0.5rem;
 }
 
 .swiper-button-next,
@@ -153,6 +172,8 @@ section {
     line-height: 5rem;
     background: var(--white);
     color: var(--black);
+    border-radius: 50%; /* Make the buttons round */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .swiper-button-next:hover,
@@ -256,6 +277,10 @@ section {
     border-radius: .5rem;
     box-shadow: var(--box-shadow);
     margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
 }
 
 .room .slide .image {
@@ -305,7 +330,10 @@ section {
 
 .room .slide .content {
     padding: 2rem;
-    padding-top: 0;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .room .slide .content h3 {
@@ -318,9 +346,305 @@ section {
     color: #666;
     padding: .5rem 0;
     line-height: 1.5;
+    flex-grow: 1;
 }
 
+.room .slide .content .stars  {
+    padding: 1rem 0;
+}
 .room .slide .content .stars i {
     font-size: 1.7rem;
+}
+
+.room .slide .content .btn {
+    align-self: flex-start;
+}
+
+.services .box-container{
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(16rem,1fr));
+    gap: 2rem;
+}
+
+.services .box-container .box{
+
+    text-align: center;
+}
+
+.services .box-container .box img{
+    height: 10rem;
+    margin-bottom: .7rem;
+}
+
+.services .box-container .box h3{
+
+    font-size: 1.7rem;
+    color: var(--black);
+    padding: .5rem 0;
+}
+
+.reservation form{
+    padding: 2rem;
+    border: .2rem solid rgba(0, 0, 0, 0.1);
+    border-radius: 1.5rem;;
+}
+
+.reservation form .container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.reservation form .container .box {
+    flex: 1 1 40rem;
+}
+.reservation form .container .box p {
+    font-size: 1.8rem;
     color: var(--primary);
+}
+
+.reservation form .container .box .input {
+    font-size: 1.8rem;
+    width: 100%;
+    padding: 1rem 0;
+    margin: 1rem 0;
+    border-bottom: .2rem solid(rgba(0,0,0,0.1));
+    color: var(--black);
+}
+
+header {
+    background-color: #181661;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+   
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    border-radius: 5px;
+    align-items: center;
+    background-color: #181661;
+    justify-content: space-between;
+    color: #fff;
+    z-index: 100;
+    animation: fadeIn .5s ease-in forwards;
+    
+  }
+    
+  .nav-menu a:hover {
+    color: #c0b283;
+  }
+  
+  .logo img {
+    width: 90px;
+    height: auto;
+    margin: 0;
+  }
+  
+  .nav-menu {
+    display: flex;
+    gap: 5px;
+
+  }
+  
+  .nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: ease .3s;
+    font-weight: bold; 
+    justify-content: space-between;
+  }
+  
+  .hamburger {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 10px;
+    border: 2px solid white;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #fff;
+  }
+  
+  @media (max-width: 768px) {
+    .nav-menu {
+      position: absolute;
+      left: -90%;
+      top: 70px;
+      gap: 0;
+      flex-direction: column;
+      background-color: #181661;
+      width:30%;
+      border-radius: 5px;
+      text-align: center;
+      transition: 0.3s;
+      z-index: 101;
+    }
+  
+    .nav-menu.active {
+      left: 0;
+    }
+  
+    .nav-menu a {
+      padding: 16px 0;
+    }
+  
+    .hamburger {
+      display: block;
+      z-index: 102;
+    }
+  
+    .hamburger.active .bar:nth-child(2) {
+      opacity: 0;
+    }
+  
+    .hamburger.active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+  
+    .hamburger.active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+  }
+  
+footer {
+  position: absolute;
+  background-color: #181661;
+  color: #fff;
+  text-align: center;
+  height: auto;
+  width: 100%;
+  font-family: "Open Sans";
+  padding-top: 40px;
+  color: #fff;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.footer-content h3 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  line-height: 3rem;
+}
+.footer-content p {
+  max-width: 500px;
+  margin: 10px auto;
+  line-height: 28px;
+  font-size: 14px;
+}
+.socials {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1 rem 0 3rem 0;
+}
+.socials li {
+  margin: 0 10px;
+}
+.socials a i {
+  color: #c0b283;
+}
+.socials a:hover i {
+  font-size: 1.1rem;
+  transition: color 0.4s ease;
+}
+.footer-bottom {
+  color: black;
+  background-color: white;
+  width: 100wv;
+  padding: 20px 0;
+  text-align: center;
+}
+.footer-bottom p {
+  font-size: 14px;
+  word-spacing: 2px;
+  text-transform: capitalize;
+}
+.footer-bottom span {
+  text-transform: uppercase;
+  opacity: 4;
+  font-weight: 200;
+}
+
+.contact form {
+    padding: 2rem;
+    border: .2rem solid rgba(0, 0, 0, 0.1);
+    border-radius: 1.5rem;
+}
+
+.contact form .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.contact form .container .box {
+    flex: 1 1 40rem;
+}
+
+.contact form .container .box p {
+    font-size: 1.8rem;
+    color: var(--primary);
+}
+
+.contact form .container .box .input {
+    font-size: 1.8rem;
+    width: 100%;
+    padding: 1rem 0;
+    margin: 1rem 0;
+    border-bottom: .2rem solid rgba(0,0,0,0.1);
+    color: var(--black);
+    outline: none;
+}
+
+.contact form .container .box .input:focus {
+    border-bottom: .2rem solid var(--primary);
+}
+
+.contact form .container .box textarea.input {
+    resize: none;
+}
+
+.contact form .btn {
+    font-size: 1.8rem;
+    padding: 1rem 2rem;
+    background-color: var(--primary);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 1rem;
+}
+
+.contact form .btn:hover {
+    background-color: var(--black);
+}
+.book-button {
+    background-color: white;
+    color: #000; /* You can choose another color for the text if you like */
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.book-button:hover {
+    background-color: #f0f0f0; /* Slightly darker on hover */
 }

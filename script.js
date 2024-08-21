@@ -31,15 +31,15 @@ var swiper = new Swiper(".room-slider", {
     },
     breakpoints: {
         0: {
-            slidesPerView: 1, // Fixed typo: slidePerView -> slidesPerView
+            slidesPerView: 1,
         },
         768: {
-            slidesPerView: 2, // Fixed typo: slidePerView -> slidesPerView
+            slidesPerView: 2,
         },
         991: {
-            slidesPerView: 3, // Fixed typo: slidePerView -> slidesPerView
+            slidesPerView: 3,
         },
-    }
+    },
 });
 
 
