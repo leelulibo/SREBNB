@@ -745,3 +745,32 @@ footer {
     margin: 0 auto 20px auto; /* Centers logo and adds space below it */
   }
   
+  /* For Tablets and Larger Screens */
+@media (min-width: 768px) {
+    .popup {
+        width: 50%;
+        max-width: 500px;
+    }
+}
+
+/* For Desktops */
+@media (min-width: 1024px) {
+    .popup {
+        width: 30%;
+        max-width: 600px;
+    }
+}
+
+/* For Mobile Devices */
+@media (max-width: 767px) {
+    .popup {
+        width: 90%;
+        max-width: 90%;
+        padding: 1rem;
+    }
+
+    .popup .close-btn {
+        top: 0.5rem;
+        right: 0.5rem;
+    }
+}
