@@ -82,7 +82,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 2rem 9%;
+    padding: 2rem 9%; /* Adjust as needed */
 }
 /* .header .logo {
     font-size: 2.5rem;
@@ -421,6 +421,7 @@ header {
 .navbar {
     position: fixed;
     top: 0;
+    height: 100px;
     width: 100%;
     display: flex;
     border-radius: 5px;
@@ -438,7 +439,7 @@ header {
   }
   
   .logo img {
-    width: 90px;
+    width: 30rem;
     height: auto;
     margin: 0;
   }
@@ -646,3 +647,101 @@ footer {
 .book-button:hover {
     background-color: #f0f0f0; /* Slightly darker on hover */
 }
+.property-info {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.property-info .card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+}
+
+.property-info .card h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.property-info .card p {
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.property-info .card p strong {
+    color: #000;
+}
+
+
+
+
+/* Modal background */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* The Modal (background) */
+#myModal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 600px; /* Set a max-width for better appearance on larger screens */
+    position: relative;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+  }
+  
+  /* Logo Styling */
+  .modal-logo {
+    display: block;
+    max-width: 100%; /* Ensures the logo scales with the modal */
+    height: auto; /* Keeps aspect ratio */
+    margin: 0 auto 20px auto; /* Centers logo and adds space below it */
+  }
+  
